@@ -1,3 +1,5 @@
+- var text = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.";
+
 doctype html
 html(lang="en")
     head
@@ -5,101 +7,91 @@ html(lang="en")
             meta(charset="UTF-8")
             meta(name="viewport", content="width=device-width, initial-scale=1, user-scalable=no")
         title pex
-        link(rel="stylesheet" href="build/style/main.css")
+        link(rel="stylesheet" href="../style/main.css")
         link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous")
     body
         #header.header
             .container
-                .row.align-items-center
-                    .col-2
-                        a.Logo(href='#') pex
-                    .col-10
-                        .headerNav
-                            ul.nav.justify-content-between.align-items-center.flex-nowrap
-                                li
-                                    a(href='#') About
-                                li
-                                    a(href='#') How it works
-                                li
-                                    a(href='#') Services
-                                li
-                                    a(href='#') FAO
-                                li
-                                    a(href='#') Contact
-                                input.searchStyle(type='search' placeholder='Search Website')
+                .headerNav
+                    ul.nav.justify-content-between.align-items-center.flex-nowrap
+                        li
+                            a(href='#') About
+                        li
+                            a(href='#') How it works
+                        li
+                            a(href='#') Services
+                        li
+                            a(href='#') FAO
+                        li
+                            a(href='#') Contact
+                        input.searchStyle(type='search' placeholder='Search Website')
 
-                        .hamburger-menu
-                            #input.menu__toggle(type='checkbox')
-                            label.menu__btn(for='menu__toggle')
+                    .hamburger-menu
+                        input#menu__toggle(type='checkbox')
+                        label.menu__btn(for='menu__toggle')
                             span
-                            ul.menu__box
-                                li
-                                    a.menu__item(href='#') About
-                                li
-                                    a.menu__item(href='#') How it works
-                                li
-                                    a.menu__item(href='#') Services
-                                li
-                                    a.menu__item(href='#') FAO
-                                li
-                                    a.menu__item(href='#') Contact
 
+                        ul.menu__box
+                            li
+                            a.menu__item(href='#') About
+                            li
+                                a.menu__item(href='#') How it works
+                            li
+                                a.menu__item(href='#') Services
+                            li
+                                a.menu__item(href='#') FAO
+                            li
+                                a.menu__item(href='#') Contact
         #intro
             .container
-                .col-lg-7
-                .col-sm-12
-                    .introTitle
-                        h2 Designs your eyeballs will thanks you for
-                        button.buttonStyle Get Started Today
-                        p.textStyle Lorem ipsum dolor sit amet, consectetur
-
+                .d-flex.justify-content-start.align-items-center
+                    .col-lg-7.col-sm-12
+                        .introTitle
+                            .d-flex.flex-column.align-items-end
+                                h2 Designs your eyeballs will thanks you for
+                                button.buttonStyle Get Started Today
+                                p.textStyle Lorem ipsum dolor sit amet, consectetur
 
         #section
-            .sectionBlockText
+            .sectionBlockText.padding
                 .container
                     .d-flex.justify-content-content.flex-wrap
-                        .col-md-6.col-xs-12
+                        .col-md-6.col-sm-12
                             .sectionCardWrap
                                 h3.titleStyle A FANTASTIC HEADING
-                                p.textStyle Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                p.textStyle #{text}
                         .col-md-6.col-xs-12
                             .sectionCardWrap
                                 h3.titleStyle BLAZ ROBAR FOR PRESIDENT
-                                p.textStyle Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                p.textStyle #{text}
                     .d-flex.justify-content-content.flex-wrap
                         .col-md-6.col-xs-12
                             .sectionCardWrap
                                 h3.titleStyle GOOD DAY BLOKES
-                                p.textStyle Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                p.textStyle #{text}
                         .col-md-6.col-xs-12
                             .sectionCardWrap
                                 h3.titleStyle VOTE FOR ROBAR
-                                p.textStyle Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-
-            .sectionBlock
+                                p.textStyle #{text}
+            .sectionBlock.padding
                 .container
                     .d-flex.flex-column.justify-content-center.align-items-center
                         h3.titleStyle Wicked & whack, bang bang boo!
                         .col-md-8.col-xs-12
-                            p.textStyle Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            p.textStyle #{text}
                             button.buttonStyle Get Started Today
             .sectionInfo
-                .container-fluid
-                    .d-flex.flex-wrap.flex-row.align-items-center
-                        .col-lg-6.col-xs-12
-                            img(scr="build/img/Shape 2.png" alt='img')
-                        .col-lg-6.col-xs-12
-                            .sectionInfoText
-                                .col-12
-                                    h4.titleStyle A HEADING IS WHAT YOU NEED HERE
-                                .d-flex.flex-wrap
-                                    .col-lg-12.col-sm-6
-                                        p.textStyle Tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                                .col-lg-12.col-sm-6
-                                    p.textStyle Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-    #footer.footer
+                .d-flex.flex-wrap.flex-row.align-items-center
+                    .col-lg-6.col-12
+                        img(src="../img/section-img.png" alt="section")
+                    .col-lg-6.col-12
+                        .sectionInfoText
+                            h4.titleStyle A HEADING IS WHAT YOU NEED HERE
+                            p.textStyle Tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                            p.textStyle Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+    #footer.footer.padding
         .container
             .d-flex.flex-column.justify-content-center.align-items-center.h-100
-                h5.titleStyle GET IN TOUCH
-                p.textStyle textStyle w-75">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                p.textStyle Get in touch
+                p.textStyle Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 a(href='#') help@yomuma.com

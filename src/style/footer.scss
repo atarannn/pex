@@ -1,0 +1,30 @@
+#footer {
+  background-color: #363849;
+  color: #ffffff;
+
+  .textStyle{
+    @include textStyle(18px, #fff, center, 5px);
+
+    &:first-child{
+      text-transform: uppercase;
+    }
+
+    &:nth-child(2){
+      width: 75%;
+
+      @media (max-width: 767px){
+        width: 100%;
+      }
+    }
+  }
+
+  & a{
+    @include textStyle(18px, #fff, center, 10px);
+    transition: color, font-size 0.2s linear;
+
+    &:hover{
+      @include textStyle(20px, $pink, center, 10px);
+      transition: color, font-size 0.2s linear;
+    }
+  }
+}

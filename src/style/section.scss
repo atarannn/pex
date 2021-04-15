@@ -1,0 +1,73 @@
+#section{
+  .sectionBlockText {
+    height: 100%;
+    background-color: $gray;
+
+    .sectionCardWrap {
+      padding: 40px 0;
+
+      .titleStyle{
+        @include textStyle(26px, #fff, left, 10px);
+        text-transform: uppercase;
+      }
+
+      .textStyle{
+        @include textStyle(20px, #fff, left, 0);
+      }
+    }
+  }
+
+  .sectionBlock{
+    background: $pink;
+    height: 100%;
+
+    .titleStyle{
+      @include titleStyle;
+    }
+
+    .textStyle{
+      @include textStyle(22px, #fff, center, 20px);
+      letter-spacing: 1px;
+    }
+
+    .buttonStyle{
+      margin: 0 auto;
+      @include buttonStyle(#fff, $gray);
+      @include flex-layout;
+    }
+  }
+
+  .sectionInfo{
+    height: 100%;
+
+    .col-lg-6{
+      padding: 0;
+    }
+
+    & img{
+      width: 100%;
+      height: auto;
+      padding: 0;
+    }
+
+    .sectionInfoText{
+      padding: 30px 20px;
+
+      .titleStyle{
+        @include titleStyle(28px, #111, left, 10px);
+
+        @media (max-width: 991px){
+          @include titleStyle(28px, #111, center, 10px);
+        }
+      }
+
+      .textStyle{
+        @include textStyle(18px, #111, left, 5px);
+
+        @media (max-width: 991px){
+          @include textStyle(18px, #111, center, 15px);
+        }
+      }
+    }
+  }
+}

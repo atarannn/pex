@@ -1,0 +1,67 @@
+$purple: #A102D1;
+$pink: #F544B1;
+$gray: #363849;
+
+@mixin flex-layout($flex-direction: row, $justify-content: center, $align-items: center) {
+  display: flex;
+  flex-direction: $flex-direction;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+
+@mixin titleStyle ($font-size: 28px, $color: #fff, $text-align: center, $padding: 0){
+  font-size: $font-size;
+  font-weight: 700;
+  font-family: Mukta, sans-serif;
+  letter-spacing: 2px;
+  color: $color;
+  text-align: $text-align;
+
+  padding-top: $padding;
+  padding-bottom: $padding;
+}
+
+@mixin textStyle ($font-size: 22px, $color: #fff, $text-align: center, $padding: 0){
+  font-size: $font-size;
+  font-weight: 400;
+  font-family: Mukta, sans-serif;
+  letter-spacing: 1px;
+  color: $color;
+  text-align: $text-align;
+
+  padding-top: $padding;
+  padding-bottom: $padding;
+}
+
+@mixin buttonStyle ($color: #fff, $background-color: $purple){
+  padding: 25px 70px;
+  border: none;
+  border-radius: 50px;
+  background-color: $background-color;
+
+  font-size: 18px;
+  font-weight: 700;
+  font-family: Mukta, sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 2px;
+  color: $color;
+
+  transition: 0.3s transform linear;
+
+  &:hover{
+    transform: translate3d(0, -10px, 0);
+    transition: transform 0.3s linear;
+    cursor: pointer;
+  }
+
+  &:focus{
+    outline: none;
+  }
+
+  @media (max-width: 767px){
+    padding: 20px 50px;
+    font-size: 16px;
+  }
+}

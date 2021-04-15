@@ -1,0 +1,33 @@
+#intro {
+  height: 100vh;
+  background: url("../img/Layer.png") center no-repeat;
+  background-size: cover;
+
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.introTitle {
+
+  & h2{
+    @include titleStyle(48px, #fff, right, 35px);
+
+    @media (max-width: 767px){
+      @include titleStyle(40px, #fff, right, 20px);
+    }
+  }
+
+  .textStyle{
+    @include textStyle(22px, #fff, right, 35px);
+
+    @media (max-width: 767px){
+      @include textStyle(20px, #fff, right, 20px);
+    }
+  }
+
+  .buttonStyle {
+    @include buttonStyle;
+  }
+}
+
