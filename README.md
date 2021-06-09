@@ -12,7 +12,7 @@ To start the project, you must  install the latest version of **WebStorm**.
 6. as a result you will have a cloned project.
 
 ### After, in the project directory, you can run:
-###`npm install`
+### `npm install`
 ### `gulp`
 ____
 > Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
