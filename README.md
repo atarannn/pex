@@ -13,7 +13,6 @@ To start the project, you must  install the latest version of **WebStorm**.
 
 ### After, in the project directory, you can run:
 ###`npm install`
-###and then:
 ### `gulp`
 ____
 > Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
